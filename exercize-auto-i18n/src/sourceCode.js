@@ -1,23 +1,9 @@
-import intl from 'intl2';
-/**
- * App
- */
-function App() {
-    const title = 'title';
-    const desc = `desc`;
-    const desc2 = /*i18n-disable*/`desc`;
-    const desc3 = `aaa ${ title + desc} bbb ${ desc2 } ccc`;
+const params = 1;
+const a = 2;
+const res = `111我是取参数的${params + a} ${a}`;
+console.log(res);
+const res2 = `222我是取参数的${params + a} ${a} ${`嵌套的模板语言${a}`}`;
+console.log(res2);
 
-    return (
-      <div className="app" title={"测试"}>
-        <img src={Logo} />
-        <h1>${title}</h1>
-        <p>${desc}</p>  
-        <div>
-        {
-            /*i18n-disable*/'中文'
-        }
-        </div>
-      </div>
-    );
-  }
+const res3 = `333我是取参数的${params + a} ${a} ${`嵌套的模板语言${`3333${a} ${`我是最后一层${a}`}`}`}`;
+console.log(res3);

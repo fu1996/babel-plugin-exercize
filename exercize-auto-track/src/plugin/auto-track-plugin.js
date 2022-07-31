@@ -20,6 +20,9 @@ const autoTrackPlugin = declare((api, options, dirname) => {
                                 }
                                 path.stop();
                             }
+                        },
+                        VariableDeclaration(curPath, state) {
+                            console.log('VariableDeclaration', curPath, state);
                         }
                     });
                     if (!state.trackerImportId) {

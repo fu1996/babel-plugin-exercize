@@ -18,5 +18,5 @@ const { code } = transformFromAstSync(ast, sourceCode, {
         outputDir: path.resolve(__dirname, './output')
     }]]
 });
-
-console.log(code);
+fs.writeFileSync(path.join(__dirname, './dist.js'), code, {encoding: 'utf8'});
+// console.log(code);

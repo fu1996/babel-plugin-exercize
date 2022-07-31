@@ -1,0 +1,10 @@
+{
+    "ignore": [
+        "dist.js"
+    ],
+    "watch": [
+        "./src/index.js",
+        "./src/sourceCode.js",
+        "./src/plugin/auto-i18n-plugin.js"
+    ]
+}
